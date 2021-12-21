@@ -12,7 +12,15 @@ class Post(models.Model):
 
     def publish(self):
         self.published_date = timezone.now()
-        self.save()
+        self.save() 
+
+    '''title = models.CharField(max_length=200)
+    location = models.CharField(max_length=200)
+    facing = models.CharField(max_length=200)
+    created_date = models.DateTimeField(default=timezone.now)'''
+
+
+
 
     def __str__(self):
         return self.title
